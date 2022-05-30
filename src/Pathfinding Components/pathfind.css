@@ -1,19 +1,18 @@
-.wrapper{
-height: 939px;
+.sider{
+    z-index: 100;
 }
 .grid {
     font-size: 0;
     pointer-events: unset;
 
-    position: relative;
-    /*left: 50%;
+  /*  position: relative;
+     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, 2%); */
 
        /* top: 50%;
          left: 50%;*/
-    margin-left: -1%;
-    padding-left: 10.67px;
+    margin-left: -13%;
    /* transform: translate(-50%, -50%);*/
   }
 
@@ -21,10 +20,10 @@ height: 939px;
     font-size: 0;
     pointer-events: none;
 
-    position: relative;
-   /*  left: 50%;
+  /*  position: relative;
+   left: 50%;
     transform: translate(-50%, 2%); */
-    margin-left: -1%;
-    padding-left: 10.67px;
+    margin-left: -13%;
+
 
   }

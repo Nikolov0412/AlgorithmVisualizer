@@ -37,7 +37,7 @@ class Node extends Component {
       ? "node node-visited"
       : "node";
 
-    let cellWidth = Math.floor((width-100) / numColumns);
+    let cellWidth = Math.floor((width) / numColumns);
     let cellHeight;
     if (width > 1500) {
       cellHeight = Math.floor((height - 70) / numRows);

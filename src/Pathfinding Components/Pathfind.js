@@ -44,7 +44,7 @@ const { Option } = Select;
 
 
 
-const initialNum = getInitialNum(window.innerWidth, window.innerHeight);
+const initialNum = getInitialNum(window.innerWidth-500, window.innerHeight-500);
 const initialNumRows = initialNum[0];
 const initialNumColumns = initialNum[1];
 
@@ -549,7 +549,7 @@ export default class Pathfind extends Component{
     if (this.state.visualizingAlgorithm || this.state.generatingMaze) {
       return;
     }
-    this.props.clearGrid();
+    this.clearGrid();
     this.setState({
       pathState: false,
       mazeState: false,
@@ -649,7 +649,7 @@ export default class Pathfind extends Component{
         <Navigation default='/pathfind'/>
     </Header>
     <Layout>
-      <Sider width={200} style={{backgroundColor:'#001529'}}>
+      <Sider width={200} style={{backgroundColor:'#001529'}} className='sider'>
             <Menu items={menuItems}>
 
             </Menu>
@@ -727,17 +727,17 @@ export default class Pathfind extends Component{
 function getInitialNum(width, height) {
   let numColumns;
   if (width > 1500) {
-    numColumns = Math.floor(width / 25);
+    numColumns = Math.floor(width / 30);
   } else if (width > 1250) {
-    numColumns = Math.floor(width / 22.5);
+    numColumns = Math.floor(width / 25);
   } else if (width >1000) {
     numColumns = Math.floor(width / 20);
   } else if (width > 750) {
-    numColumns = Math.floor(width / 17.5);
-  } else if (width > 500) {
     numColumns = Math.floor(width / 15);
+  } else if (width > 500) {
+    numColumns = Math.floor(width / 10);
   } else if (width > 250) {
-    numColumns = Math.floor(width / 12.5);
+    numColumns = Math.floor(width / 5);
   } else if (width > 0) {
     numColumns = Math.floor(width / 10);
   }
