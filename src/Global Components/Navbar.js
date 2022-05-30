@@ -10,8 +10,8 @@ const menuItems = [
         label: (<NavLink to='/'> Home </NavLink>),
     },
     {
-        key: '/pathfinding',
-        label: (<NavLink to='/'> Pathfinding </NavLink>),
+        key: '/pathfind',
+        label: (<NavLink to='/pathfind'> Pathfinding </NavLink>),
     },
     {
         key: '/sorting',
@@ -24,9 +24,9 @@ const menuItems = [
 ]
 
 
-function Navigation() {
+function Navigation(props) {
     return(
-        <Menu mode="horizontal" items={menuItems} theme='dark'  defaultSelectedKeys={['/']}>
+        <Menu mode="horizontal" items={menuItems} theme='dark' defaultSelectedKeys={[props.default]}>
 
         </Menu>
 
