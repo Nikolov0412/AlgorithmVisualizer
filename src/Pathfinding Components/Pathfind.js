@@ -599,7 +599,7 @@ export default class Pathfind extends Component{
             },
             {
               key:'2',
-              label:(<Button type='dashed' onClick={()=>this.visualizeAlgorithm()}>Visualize {this.state.algorithm}</Button>),
+              label:(<Button type='primary' onClick={()=>this.visualizeAlgorithm()}>Visualize {this.state.algorithm}</Button>),
             },
             {
               key:'3',
@@ -618,14 +618,10 @@ export default class Pathfind extends Component{
           },
           {
             key:'4',
-            label:(<Button type='dashed' onClick={()=>this.generateMaze()}>Generate {this.state.maze}</Button>),
+            label:(<Button type='primary' onClick={()=>this.generateMaze()}>Generate {this.state.maze}</Button>),
           },
           {
             key:'5',
-            label:(<Button type='primary' onClick={()=>this.clearGrid()}>Clear Grid</Button>),
-          },
-          {
-            key:'6',
             label:(<Select
               defaultValue="Speed"
               style={{
@@ -638,7 +634,12 @@ export default class Pathfind extends Component{
               <Option value="fast">Fast</Option>
 
             </Select>),
-          }
+          },
+          {
+            key:'6',
+            label:(<Button type='primary' onClick={()=>this.clearGrid()}>Clear Grid</Button>),
+          },
+
         ];
 
     return(
@@ -648,7 +649,7 @@ export default class Pathfind extends Component{
     </Header>
     <Layout>
       <Sider width={200} style={{backgroundColor:'#001529'}}>
-            <Menu items={menuItems}>
+            <Menu items={menuItems} theme='dark' style={{paddingTop:50}}>
 
             </Menu>
       </Sider>
