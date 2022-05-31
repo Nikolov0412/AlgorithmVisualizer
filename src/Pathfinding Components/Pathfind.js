@@ -44,7 +44,7 @@ const { Option } = Select;
 
 
 
-const initialNum = getInitialNum(window.innerWidth-500, window.innerHeight-500);
+const initialNum = getInitialNum(window.innerWidth, window.innerHeight);
 const initialNumRows = initialNum[0];
 const initialNumColumns = initialNum[1];
 
@@ -66,8 +66,8 @@ export default class Pathfind extends Component{
     numColumns: initialNumColumns,
     speed: 10,
     mazeSpeed: 10,
-    algorithm: 'None',
-    maze:'None',
+    algorithm: 'Algorithm',
+    maze:'Maze',
     pathState: false,
     mazeState: false,
     speedState: "Speed",
@@ -111,8 +111,6 @@ export default class Pathfind extends Component{
       return;
     }
     this.setState({
-      algorithm: "None",
-      maze: "None",
       pathState: false,
       mazeState: false,
     });
@@ -502,7 +500,7 @@ export default class Pathfind extends Component{
       return;
     }
     if (
-      this.state.algorithm === "None")
+      this.state.algorithm === "Algorithm")
       {
       }
      else {
@@ -530,7 +528,7 @@ export default class Pathfind extends Component{
     if (this.state.mazeState || this.state.pathState) {
       this.clearTemp();
     }
-    if (this.state.maze === "None") {
+    if (this.state.maze === "Maze") {
 
     } else {
       this.setState({ mazeState: true });
@@ -584,7 +582,7 @@ export default class Pathfind extends Component{
             {
                 key:'1',
                 label:(<Select
-                  defaultValue="None"
+                  defaultValue="Algorithm"
                   style={{
                     width: 120,
                   }}
@@ -606,7 +604,7 @@ export default class Pathfind extends Component{
             {
               key:'3',
               label:(<Select
-                defaultValue="None"
+                defaultValue="Maze"
                 style={{
                   width: 120,
                 }}
@@ -649,7 +647,7 @@ export default class Pathfind extends Component{
         <Navigation default='/pathfind'/>
     </Header>
     <Layout>
-      <Sider width={200} style={{backgroundColor:'#001529'}} className='sider'>
+      <Sider width={200} style={{backgroundColor:'#001529'}}>
             <Menu items={menuItems}>
 
             </Menu>

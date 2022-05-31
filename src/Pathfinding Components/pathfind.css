@@ -12,7 +12,8 @@
 
        /* top: 50%;
          left: 50%;*/
-    margin-left: -13%;
+        position: absolute;
+        display: contents;
    /* transform: translate(-50%, -50%);*/
   }
 
@@ -23,7 +24,8 @@
   /*  position: relative;
    left: 50%;
     transform: translate(-50%, 2%); */
-    margin-left: -13%;
+    position: absolute;
+    display: contents;
 
 
   }

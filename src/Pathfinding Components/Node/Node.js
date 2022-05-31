@@ -53,7 +53,7 @@ class Node extends Component {
       <div
         id={`node-${row}-${col}`}
         className={`${extraClass}`}
-        style={{ "--width": `${cellWidth}px`, "--height": `${cellHeight}px` }}
+        style={{ "--width": `${cellWidth-3.55}px`, "--height": `${cellHeight}px` }}
         onMouseEnter={() => onMouseEnter(row, col)}
         onMouseDown={() => onMouseDown(row, col)}
         onMouseUp={() => onMouseUp()}
