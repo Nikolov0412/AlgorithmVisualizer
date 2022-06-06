@@ -566,7 +566,7 @@ export default class Pathfind extends Component{
   }
 
     render(){
-        const {grid, mouseIsPressed} = this.state;
+        const {grid} = this.state;
         const handleAlgorithm = (value) => {
          this.setState({algorithm:value});
         };
@@ -737,7 +737,7 @@ function getInitialNum(width, height) {
     numColumns = Math.floor(width / 10);
   } else if (width > 250) {
     numColumns = Math.floor(width / 5);
-  } else if (width > 0) {
+   } else if (width > 0) {
     numColumns = Math.floor(width / 10);
   }
   let cellWidth = Math.floor(width / numColumns);

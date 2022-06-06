@@ -1,0 +1,27 @@
+body{
+    background-color: #001529;
+}
+.header {
+    position: relative;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+
+  }
+
+  .sortingBars {
+    padding-top:15%;
+    padding-bottom:15%;
+    padding-left:10%;
+  }
+
+  .bars {
+    width: 10px;
+    background-color: #ff7f50;
+    margin-left: 4px;
+    display: inline-block;
+    border-radius: 10px;
+  }
